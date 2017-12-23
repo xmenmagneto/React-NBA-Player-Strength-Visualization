@@ -7,7 +7,8 @@ export class CountSlider extends React.Component {
     }
     onChange = (value) => {
         this.setState({
-            inputValue: value,
+            inputValue: Number(value) || 2,  //如果是数字，就用value；不是的话用default value: 2
+            // inputValue: isNan(Number(value)) ? 2 : value,
         });
         this.props.onSliderChange(value);
     }
