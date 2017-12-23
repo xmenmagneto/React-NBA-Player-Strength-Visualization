@@ -4,7 +4,12 @@ import {ShotChart} from "./ShortChar"
 export class DataViewContainer extends React.Component {
     render() {
         return(
-            <ShotChart playerId={this.props.playerId}/>
+            <div className="data-view">
+                <ShotChart playerId={this.props.playerId}/>
+                <div classname="filters">
+
+                </div>
+            </div>
         );
     }
 }
