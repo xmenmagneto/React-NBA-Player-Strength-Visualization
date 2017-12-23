@@ -1,6 +1,7 @@
 import React from 'react';
 import {ShotChart} from "./ShortChar";
-import {CountSlider} from "./CountSlider"
+import {CountSlider} from "./CountSlider";
+import _ from "lodash";
 
 
 export class DataViewContainer extends React.Component {
@@ -18,7 +19,7 @@ export class DataViewContainer extends React.Component {
                 <ShotChart minCount={this.state.minCount} playerId={this.props.playerId}/>
                 <div className="filters">
                     <CountSlider
-                        onSliderChange={this.onSliderChange}
+                        onSliderChange={_.debounce(this.onSliderChange, 500)}
                         minCount={this.state.minCount}/>
                 </div>
             </div>
