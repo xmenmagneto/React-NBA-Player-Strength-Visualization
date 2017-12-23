@@ -23,8 +23,9 @@ export class ShotChart extends React.Component {
                 shot_distance: shot.shotDistance,
                 shot_made_flag: shot.shotMadeFlag,  //是否命中{1, 0}
             }));
-
+            console.log(final_shots);
             const courtSelection = d3.select("#shot-chart");
+            courtSelection.html('');
             const chart_court = court().width(500);
             const chart_shots = shots().shotRenderThreshold(2).displayToolTips(true).displayType("hexbin");
             courtSelection.call(chart_court);
