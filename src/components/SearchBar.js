@@ -45,6 +45,7 @@ export class SearchBar extends React.Component {
                 onSelect={this.onSelect}
                 onSearch={this.handleSearch}
                 placeholder="Please enter player name"
+                optionLabelProp="value"
 
             >
                 <Input suffix={<Icon type="search" className="certain-category-icon" />} />
